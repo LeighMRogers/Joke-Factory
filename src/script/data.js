@@ -19,6 +19,5 @@ const createJokes = (newJoke) => {
         <h2>${newJoke.joke}</h2>
     `
 }
-document.getElementById("button").addEventListener("click", event => {
-    API.getJokes();
-    })
+//wrap the fetch in this to make sure the first thing that happens is the click event listener.
+document.getElementById("button").addEventListener("click", event => {API.getJokes()})
